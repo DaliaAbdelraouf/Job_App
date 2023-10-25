@@ -322,31 +322,7 @@ class _ApplyJobProcessFirstScreenState
                 ),
               ),
             ),
-            // SizedBox(
-            //   width: 360,
-            //   height: 56,
-            //   child: Container(
-            //     decoration: BoxDecoration(
-            //       borderRadius:
-            //           BorderRadius.circular(12), // Set the border radius here
-            //       border: Border.all(
-            //         color: Colors.grey, // Set the border color here
-            //         width: 1.0, // Set the border width here
-            //       ),
-            //     ),
-            //     child: IntlPhoneField(
-            //       controller: phoneController,
-            //       decoration: const InputDecoration(
-            //         labelText: 'Please Enter Your Phone Number',
-            //         border: InputBorder.none, // Remove the default border
-            //       ),
-            //       initialCountryCode: 'IN',
-            //       onChanged: (phone) {
-            //         print(phone.completeNumber);
-            //       },
-            //     ),
-            //   ),
-            // ),
+           
             const SizedBox(
               height: 15,
             ),

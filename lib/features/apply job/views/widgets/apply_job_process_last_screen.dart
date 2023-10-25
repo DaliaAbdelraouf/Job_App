@@ -515,14 +515,7 @@ class _ApplyJobProcessLastScreenState extends State<ApplyJobProcessLastScreen> {
               fixedSize: const Size(340, 48),
             ),
             onPressed: () {
-              // print('namebutttton: ${widget.name}');
-              // print('emailbutttton: ${widget.email}');
-              // print('mobilebutttton: ${widget.mobile}');
-              // print('jobtype: ${widget.jobType}');
-              // print('jobIdbutttton: $jobId');
-              // print('userIdbutttton: $userId');
-              // print('cvFilebutttton: $cvFile');
-              // print('otherFilebutttton: $otherFile');
+           
               if (cvFile != null && otherFile != null) {
                 print('NOT NULLL');
                 submitApplication(

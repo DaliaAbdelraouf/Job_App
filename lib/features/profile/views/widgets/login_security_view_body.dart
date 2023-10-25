@@ -60,12 +60,7 @@ class LoginAndSecurityViewBody extends StatelessWidget {
                   LoginSecurityCustomWidget(
                     name: "Phone Number",
                     onTap: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => EmailAdressView(
-                      //           userEmailAddress: snapshot.data!),
-                      //     ));
+                     
                     },
                   ),
                   LoginSecurityCustomWidget(
@@ -83,12 +78,7 @@ class LoginAndSecurityViewBody extends StatelessWidget {
                     name: "Two-step verification",
                     content: "Non active",
                     onTap: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => EmailAdressView(
-                      //           userEmailAddress: snapshot.data!),
-                      //     ));
+                     
                     },
                   ),
                   const LoginSecurityCustomWidget(

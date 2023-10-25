@@ -19,7 +19,7 @@ class _NotificationCustomWidgetState extends State<NotificationCustomWidget> {
           children: [
             Text(
               widget.notificationTitle,
-              // fontfamily: textFamilyRegular,
+             
             ),
             const SwitchButtonWidget()
           ],

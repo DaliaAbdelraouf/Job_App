@@ -254,46 +254,7 @@ class _RecentJobItemState extends State<RecentJobItem> {
                 padding: const EdgeInsets.only(right: 50),
                 child: Divider(color: Colors.black.withOpacity(0.4)),
               )
-              // Column(
-              //   children: [
-              //     Row(
-              //       children: [
-              //         Text(
-              //         "  job.salary",
-              //           style: const TextStyle(
-              //               fontWeight: FontWeight.w500,
-              //               color: Colors.white,
-              //               fontSize: 17),
-              //         ),
-              //         const SizedBox(width: 130),
-              //         SizedBox(
-              //           width: 100,
-              //           child: ElevatedButton(
-              //             onPressed: null,
-              //             style: ButtonStyle(
-              //               backgroundColor: MaterialStateProperty.all(
-              //                   const Color(0xfffff3366ff)),
-              //               shape: MaterialStateProperty.all<
-              //                   RoundedRectangleBorder>(
-              //                 RoundedRectangleBorder(
-              //                   borderRadius: BorderRadius.circular(40.0),
-              //                 ),
-              //               ),
-              //             ),
-              //             child: const Text(
-              //               "Apply",
-              //               style: TextStyle(
-              //                 color: Colors.white,
-              //                 fontSize: 12,
-              //                 fontWeight: FontWeight.w400,
-              //               ),
-              //             ),
-              //           ),
-              //         ),
-              //       ],
-              //     )
-              //   ],
-              // ),
+             
             ],
           ),
         ),
