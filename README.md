@@ -1,16 +1,7 @@
-# job_app
+# Job_app
 
 A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+JobApp is a mobile application created with Flutter.The app utilizes Cubit as its state management solution to handle the app's dynamic data and UI states.
+JobApp integrates with external APIs to fetch and send data, making it a real-time job application platform. It ensures data security through secure user authentication and authorization processes, all facilitated by Cubit.
+Users can upload and attach various files such as resumes and certificates directly from their devices, simplifying the application process. Cubit manages file uploads and ensures a smooth data transfer to the server.And there is other functionalitites like search.
