@@ -318,19 +318,7 @@ class _LoginScreenViewBodyState extends State<LoginScreenViewBody> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // ElevatedButton(
-                    //   onPressed: () {},
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.center,
-                    //     children: const [
-                    //       Icon(Icons.g_translate), // Replace with your desired icon
-                    //       SizedBox(
-                    //           width:
-                    //               8), // Add some spacing between the icon and text
-                    //       Text('Google'),
-                    //     ],
-                    //   ),
-                    // ),
+                  
                     GoogleAuthButton(
                       onPressed: () {},
                       text: ' Google',

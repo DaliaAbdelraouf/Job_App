@@ -49,11 +49,7 @@ class _PreferredLocationCustomWidgetState
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-              // CircleAvatar(
-              //   backgroundColor: Colors.white,
-              //   radius: 30,
-              //   backgroundImage: AssetImage(widget.imagePath ?? ''),
-              // ),
+             
               CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 25,

@@ -262,32 +262,4 @@ class _PortfolioViewBodyState extends State<PortfolioViewBody> {
     );
   }
 
-  // File? cvFile;
-  // File? imageFile;
-
-  // Future pickCvFile() async {
-  //   FilePickerResult? result = await FilePicker.platform.pickFiles();
-
-  //   if (result != null) {
-  //     cvFile = File(result.files.single.path ?? "");
-  //     // setState(() {
-  //     //   cvFileName = cvFile?.path.split('/').last; // Extract the filename
-  //     //   cvFileSize =
-  //     //       '${(cvFile?.lengthSync() ?? 0) / 1024} KB'; // Calculate the file size in KB
-  //     // });
-  //   }
-  // }
-
-  // Future pickOtherFile() async {
-  //   FilePickerResult? result = await FilePicker.platform.pickFiles();
-
-  //   if (result != null) {
-  //     imageFile = File(result.files.single.path ?? "");
-  //     // setState(() {
-  //     //   otherFileName = otherFile?.path.split('/').last; // Extract the filename
-  //     //   otherFileSize =
-  //     //       '${(otherFile?.lengthSync() ?? 0) / 1024} KB'; // Calculate the file size in KB
-  //     // });
-  //   }
-  // }
 }

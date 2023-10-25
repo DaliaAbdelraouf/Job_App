@@ -72,17 +72,6 @@ class SharedPreferencesUtil {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getString('user_email');
   }
-//save user id
-  // Future<void> saveID(Int ID) async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   await prefs.setString('user_ID', ID);
-  // }
-
-  // static Future<Int?> getID() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   return prefs.getInt('user_ID');
-  // }
-
   Future<void> saveID(int ID) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('user_ID', ID);

@@ -39,13 +39,7 @@ class _AppNavigationLogicState extends State<AppNavigationLogic> {
       });
     }
   }
-  // final List<Widget> _screens = [
-  //   const HomeView(),
-  //   const MessagesView(),
-  //   const AppliedJobView(),
-  //   const SavedJobsScreen(),
-  //   const ProfileView()
-  // ];
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -74,11 +68,7 @@ class _AppNavigationLogicState extends State<AppNavigationLogic> {
           _buildOffstageNavigator("Page4"),
           _buildOffstageNavigator("Page5"),
         ]),
-        // _screens[_selectedIndex],
-        // IndexedStack(
-        //   index: _currentIndex,
-        //   children: _screens,
-        // ),
+      
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
             textTheme: Theme.of(context).textTheme.copyWith(
