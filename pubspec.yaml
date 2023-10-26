@@ -53,6 +53,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   dotted_border: ^2.1.0
+  fluttertoast: ^8.2.2
 
 dev_dependencies:
   flutter_test:
