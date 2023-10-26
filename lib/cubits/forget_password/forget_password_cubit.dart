@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-
-import '../../models/api_model.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import '../../utils/shared_prefrences.dart';
 
 part 'forget_password_state.dart';
@@ -44,6 +44,12 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
       if (response.statusCode == 200) {
         final data = response.data;
         print(data);
+        Fluttertoast.showToast(
+          msg: 'Your otp Number is: ${data['data']}',
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 3,
+        );
 
         emit(ForgetPasswordSuccess());
       } else {
