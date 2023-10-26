@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../login/views/login_screen_view.dart';
 
-class UserProfile extends StatelessWidget {
+class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
 
+  @override
+  State<UserProfile> createState() => _UserProfileState();
+}
+
+class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -38,7 +44,9 @@ class UserProfile extends StatelessWidget {
                           child: IconButton(
                               constraints:
                                   BoxConstraints.tight(const Size(37, 39)),
-                              onPressed: () {},
+                              onPressed: () {
+                                // _logout();
+                              },
                               icon: const Icon(
                                 Icons.logout,
                                 color: Colors.red,
@@ -75,3 +83,19 @@ class UserProfile extends StatelessWidget {
     );
   }
 }
+
+
+
+  // void _logout() async {
+  //   // Clear the login status
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   await prefs.setBool('isLoggedIn', false);
+
+  //   // Print the value to ensure it's set to false
+  //   var isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+  //   print('isLoggedIn is: $isLoggedIn');
+
+  //   // Navigate to the login screen
+  //   Navigator.pushReplacement(context,
+  //       MaterialPageRoute(builder: (context) => const LoginScreenView()));
+  // }

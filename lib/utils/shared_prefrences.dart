@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+
 class SharedPreferencesUtil {
   SharedPreferencesUtil();
 //Save user email
@@ -11,6 +12,7 @@ class SharedPreferencesUtil {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getString('user_email');
   }
+
   Future<void> saveID(int ID) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('user_ID', ID);
@@ -26,7 +28,7 @@ class SharedPreferencesUtil {
     return prefs.getString('auth_token');
   }
 
-    Future<void> saveJobId(int jobId) async {
+  Future<void> saveJobId(int jobId) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('job_id', jobId);
   }
@@ -37,4 +39,11 @@ class SharedPreferencesUtil {
     return prefs.getInt('job_id');
   }
 
+  static Future<bool> checkLoginStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    bool isLoggedIn =
+        prefs.getBool('isLoggedIn') ?? false; // Default to false if not found
+    print("3aaaaaaaaaaaaaaaaa$isLoggedIn");
+    return isLoggedIn;
+  }
 }

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:job_app/features/home/views/home_view.dart';
-import 'package:job_app/features/home/views/widgets/saved_jobs_screen.dart';
 import 'package:job_app/features/home/views/widgets/tap_navigator.dart';
-import '../../../applied job/views/applied_job_view.dart';
-import '../../../messages/views/messages_view.dart';
-import '../../../profile/views/profile_view.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AppNavigationLogic extends StatefulWidget {
   const AppNavigationLogic({Key? key}) : super(key: key);
@@ -14,6 +10,21 @@ class AppNavigationLogic extends StatefulWidget {
 }
 
 class _AppNavigationLogicState extends State<AppNavigationLogic> {
+  bool isLoggedIn = false; // Initialize to false if not logged in
+
+  @override
+  void initState() {
+    super.initState();
+    checkLoginStatus();
+  }
+
+  Future<void> checkLoginStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    final status = prefs.getBool('isLoggedIn') ?? false;
+    setState(() {
+      isLoggedIn = status;
+    });
+  }
   int _selectedTab = 0;
   String _currentPage = "Page1"; //string represents current page name
   List<String> pageKeys = ["Page1", "Page2", "Page3", "Page4", "Page5"];
@@ -39,7 +50,6 @@ class _AppNavigationLogicState extends State<AppNavigationLogic> {
       });
     }
   }
- 
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +78,6 @@ class _AppNavigationLogicState extends State<AppNavigationLogic> {
           _buildOffstageNavigator("Page4"),
           _buildOffstageNavigator("Page5"),
         ]),
-      
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
             textTheme: Theme.of(context).textTheme.copyWith(
@@ -126,6 +135,7 @@ class _AppNavigationLogicState extends State<AppNavigationLogic> {
       ),
     );
   }
+
   // Builds an offstage navigator for the specified tab item.
 //It ensures that only the navigator for the currently selected tab is visible, while the navigators for other tabs are hidden.
   Widget _buildOffstageNavigator(String tabItem) {
