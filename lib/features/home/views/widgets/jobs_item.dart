@@ -5,6 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
 import 'package:dio/dio.dart';
 import '../../../../models/api_model.dart';
+import '../../../../utils/shared_prefrences.dart';
 import '../../../apply job/views/apply_job_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

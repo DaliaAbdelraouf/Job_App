@@ -39,6 +39,7 @@ class ApplyJobDone extends StatelessWidget {
           ])),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 170),
+        //overflow the parent 
         child: OverflowBox(
           minWidth: 0.0,
           maxWidth: double.infinity,

@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dio/dio.dart';
 import '../../../../models/api_model.dart';
 import '../../../../models/apply_job_model.dart';
+import '../../../../utils/shared_prefrences.dart';
 import 'apply_job_done.dart';
 import 'package:image_picker/image_picker.dart';
 

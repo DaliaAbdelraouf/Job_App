@@ -17,17 +17,17 @@ class OnboardingScreenWidget extends StatelessWidget {
     this.text3,
   }) : super(key: key);
   final String? text1, text2, text3, image, subtitle, button;
-  final int currentPage;
-  final int index;
+  final int currentPage; //current page in the onboarding 
+  final int index;  //the index of this onboarding screen
   final List<Map<String, String>> splashData; //to access it in the row
-  final PageController pageController;
+  final PageController pageController;  //managing the page navigation.
 
   Widget buildDot({int? index}) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       margin: const EdgeInsets.only(right: 5),
       height: 6,
-      width: currentPage == index ? 7 : 6,
+      width: currentPage == index ? 7 : 6,  //control width
       decoration: BoxDecoration(
         color: currentPage == index
             ? const Color(0xffffff3366ff)
@@ -42,10 +42,10 @@ class OnboardingScreenWidget extends StatelessWidget {
     return Column(
       children: <Widget>[
         SizedBox(
-          width: double.infinity, // Set width to full screen width
+          width: double.infinity, 
           child: Image.asset(
             image!,
-            fit: BoxFit.fitWidth, // to make image fits the width
+            fit: BoxFit.fitWidth, 
           ),
         ),
         const Spacer(flex: 1),
@@ -102,12 +102,13 @@ class OnboardingScreenWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            for (int i = 0; i < splashData.length; i++) buildDot(index: i),
+            for (int i = 0; i < splashData.length; i++) buildDot(index: i), //creating an individual dot indicator and setting its width based on the current page
           ],
         ),
         const SizedBox(
           height: 40,
         ),
+        //navigate to the app screen when reaching the last page 
         ElevatedButton(
           onPressed: () {
             if (currentPage < splashData.length - 1) {

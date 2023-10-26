@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../models/api_model.dart';
+import '../../../../utils/shared_prefrences.dart';
 import '../seach_view.dart';
 import 'featured_jop_future_builder.dart';
 import 'featured_recent_job_future_builder.dart';

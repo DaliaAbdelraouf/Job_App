@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../models/api_model.dart';
 import '../../../../models/job_model.dart';
+import '../../../../utils/shared_prefrences.dart';
 
 class RecentJobItem extends StatefulWidget {
   const RecentJobItem({super.key, required this.jobs});

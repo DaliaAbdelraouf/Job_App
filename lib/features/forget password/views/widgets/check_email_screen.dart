@@ -8,23 +8,6 @@ class CheckEmailScreen extends StatelessWidget {
   const CheckEmailScreen({super.key});
   static const String id = 'CheckEmailScreen';
 
-  // void openAnotherApp() async {
-  //   const String customScheme = 'googlegmail:';
-  //   const String deepLink =
-  //       'googlegmail:///co?to=email@example.com&subject=Subject%20Here&body=Message%20Here';
-
-  //   // Convert customScheme to Uri object
-  //   final Uri customSchemeUri = Uri.parse(customScheme);
-
-  //   // Check if the Gmail app is installed
-  //   if (await canLaunchUrl(customSchemeUri)) {
-  //     // Launch Gmail with the custom scheme
-  //     await launchUrl(customSchemeUri);
-  //   } else {
-  //     // If Gmail is not installed, attempt to open the deep link in a browser
-  //     await launchUrl(Uri.parse(deepLink));
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {

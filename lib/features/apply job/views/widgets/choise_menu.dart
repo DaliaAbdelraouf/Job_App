@@ -35,7 +35,7 @@ class _ChoiceMenuState extends State<ChoiceMenu> {
   }
 
   Widget buildChoiceContainer(int choice, String choiceName) {
-    return InkWell(
+    return InkWell( //makes the choice container tappable
       onTap: () {
         handleChoice(choiceName);
       },

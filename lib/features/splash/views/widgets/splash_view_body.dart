@@ -9,6 +9,7 @@ class SplashViewBody extends StatefulWidget {
 
 class _SplashViewBody extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
+  //mixin class that provides a vsync property for managing animations.
   late AnimationController animationController;
   late Animation<double> fadingAnimation;
   @override
@@ -27,6 +28,7 @@ class _SplashViewBody extends State<SplashViewBody>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
+        //gradually changes the opacity over time (creating a fading effect)
         child: AnimatedOpacity(
           opacity: fadingAnimation.value,
           duration: const Duration(milliseconds: 600),
@@ -43,11 +45,12 @@ class _SplashViewBody extends State<SplashViewBody>
           seconds: 2,
         ));
 
-    fadingAnimation =
-        Tween<double>(begin: .4, end: 1).animate(animationController);
+    fadingAnimation = Tween<double>(begin: .4, end: 1)
+        .animate(animationController); //he range of opacity values
     animationController.repeat(reverse: true);
 
     animationController.addListener(() {
+      //rebuild with the updated opacity
       setState(() {});
     });
     animationController.forward(); // Start the animation
