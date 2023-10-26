@@ -134,7 +134,7 @@ class JobContentBuilder extends StatelessWidget {
         Row(
           children: [
             const Text(
-              "3 Employees ",
+              "1 Employees ",
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
             const SizedBox(width: 200),
@@ -156,7 +156,7 @@ class JobContentBuilder extends StatelessWidget {
         Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(bottom: 10, left: 10),
+              padding: const EdgeInsets.only(top: 10, left: 3),
               child: SizedBox(
                   width: 70,
                   height: 70,
@@ -197,7 +197,8 @@ class JobContentBuilder extends StatelessWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: contentLists[currentContent] ?? [],
+      children: contentLists[currentContent] ??
+          [], //an empty list is returned in case no content
     );
   }
 }

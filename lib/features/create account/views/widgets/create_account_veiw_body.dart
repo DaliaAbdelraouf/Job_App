@@ -122,6 +122,14 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
               return const CircularProgressIndicator();
             } else if (state is RegisterSuccess) {
               // return const Text('Account created successfully!');
+              Future.delayed(const Duration(seconds: 2), () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const JobPreferencesView(),
+                  ),
+                );
+              });
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
@@ -132,14 +140,6 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
               });
 
               // After a delay, navigate to the next screen
-              Future.delayed(const Duration(seconds: 2), () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const JobPreferencesView(),
-                  ),
-                );
-              });
             } else if (state is EmailAlreadyTaken) {
               return Text('Email already taken: ${state.errorMessage}');
             } else if (state is RegisterFailure) {
@@ -252,19 +252,19 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
                             ),
                           ),
                           prefixIcon: const Icon(Icons.lock_outline),
-                           suffixIcon: IconButton(
-                        icon: Icon(
-                          hidePassword
-                              ? Icons.visibility_off
-                              : Icons.visibility,
-                          color: Colors.grey,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            hidePassword = !hidePassword;
-                          });
-                        },
-                      ),
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              hidePassword
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                              color: Colors.grey,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                hidePassword = !hidePassword;
+                              });
+                            },
+                          ),
                           errorText: !isPasswordValid
                               ? 'Password must be at least 8 characters'
                               : null,

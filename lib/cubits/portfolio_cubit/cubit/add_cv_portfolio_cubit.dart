@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
+import 'package:job_app/utils/shared_prefrences.dart';
 import 'package:meta/meta.dart';
 import 'dart:io';
 import 'dart:developer' as developer;

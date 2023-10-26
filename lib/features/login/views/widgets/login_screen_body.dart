@@ -76,19 +76,19 @@ class _LoginScreenViewBodyState extends State<LoginScreenViewBody> {
           if (state is LoginLoading) {
             return const CircularProgressIndicator();
           } else if (state is LoginSuccess) {
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Login success!'),
-                  // duration: Duration(seconds: 3),
-                ),
-              );
-            });
-            Future.delayed(const Duration(seconds: 2), () {
+            Future.delayed(const Duration(seconds: 3), () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const AppNavigationLogic(),
+                ),
+              );
+            });
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Login success!'),
+                  // duration: Duration(seconds: 1),
                 ),
               );
             });
@@ -318,7 +318,6 @@ class _LoginScreenViewBodyState extends State<LoginScreenViewBody> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  
                     GoogleAuthButton(
                       onPressed: () {},
                       text: ' Google',
@@ -340,7 +339,6 @@ class _LoginScreenViewBodyState extends State<LoginScreenViewBody> {
                         splashColor: Colors.red,
                       ),
                     ),
-
                     const SizedBox(width: 25),
                     FacebookAuthButton(
                       onPressed: () {},

@@ -93,7 +93,9 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
         child: Column(
           children: <Widget>[
             Expanded(
-              flex: 3,
+              flex:
+                  3, // take three times the vertical space of other widgets in the same parent
+
               child: PageView.builder(
                 controller: pageController,
                 onPageChanged: (value) {
@@ -102,7 +104,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                   });
                 },
                 itemCount: splashData.length,
-                itemBuilder: (context, index) => OnboardingScreenWidget(
+                itemBuilder: (context, index) => OnboardingScreenWidget( //takes index to show the right content
                   text1: splashData[index]['text1'],
                   text2: splashData[index]['text2'],
                   text3: splashData[index]['text3'],
