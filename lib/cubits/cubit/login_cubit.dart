@@ -4,7 +4,6 @@ import 'package:job_app/utils/shared_prefrences.dart';
 import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../models/api_model.dart';
 part 'login_state.dart';
 
 class LoginCubitCubit extends Cubit<LoginCubitState> {
@@ -31,6 +30,12 @@ class LoginCubitCubit extends Cubit<LoginCubitState> {
         // Save the token to SharedPreferences
         final prefs = await SharedPreferences.getInstance();
         prefs.setString('auth_token', token);
+
+        //login and logout
+        prefs.setBool('isLoggedIn', true);
+        // var isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+        // print('isLoggedIn is: $isLoggedIn');
+
         //save email
         await SharedPreferencesUtil().saveEmail(email);
 
@@ -53,38 +58,37 @@ class LoginCubitCubit extends Cubit<LoginCubitState> {
   }
 }
 
+// if (response.statusCode == 200) {
+//   final data = response.data;
+//   final token = data['token'];
 
- // if (response.statusCode == 200) {
-      //   final data = response.data;
-      //   final token = data['token'];
+// // Save the token to SharedPreferences
+// final prefs = await SharedPreferences.getInstance();
+// prefs.setString('auth_token', token);
+// // emit(LoginSuccess(token: token));
+//   // log(data['token']);
+//   // print(data['token']);
 
-      // // Save the token to SharedPreferences
-      // final prefs = await SharedPreferences.getInstance();
-      // prefs.setString('auth_token', token);
-      // // emit(LoginSuccess(token: token));
-      //   // log(data['token']);
-      //   // print(data['token']);
+//   emit(LoginSuccess());
+///
+// if (response.statusCode == 200) {
+//   final data = response.data;
+//   final token = data['token'];
 
-      //   emit(LoginSuccess());
-      ///
-      // if (response.statusCode == 200) {
-      //   final data = response.data;
-      //   final token = data['token'];
+//   // Save the token to SharedPreferences
+//   final prefs = await SharedPreferences.getInstance();
+//   prefs.setString('auth_token', token);
+//   final savedToken = prefs.getString('auth_token');
+//   //
+//   print('Saved Token: $savedToken');
 
-      //   // Save the token to SharedPreferences
-      //   final prefs = await SharedPreferences.getInstance();
-      //   prefs.setString('auth_token', token);
-      //   final savedToken = prefs.getString('auth_token');
-      //   //
-      //   print('Saved Token: $savedToken');
+//   // Check if 'name' key exists in the response data
+//   if (data.containsKey('name')) {
+//     final String name = data['name'];
+//     // You can use the 'name' variable as needed.
+//   } else {
+//     print("error ocuured");
+//   }
 
-      //   // Check if 'name' key exists in the response data
-      //   if (data.containsKey('name')) {
-      //     final String name = data['name'];
-      //     // You can use the 'name' variable as needed.
-      //   } else {
-      //     print("error ocuured");
-      //   }
-
-      //   emit(LoginSuccess());
-      // }
+//   emit(LoginSuccess());
+// }

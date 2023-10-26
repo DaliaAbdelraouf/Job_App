@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:job_app/features/login/views/login_screen_view.dart';
 import 'package:job_app/features/splash/views/widgets/splash_screen_circles.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../home/views/home_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
